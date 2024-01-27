@@ -1,4 +1,4 @@
-# Experementing Next JS
+# Experimenting Next JS
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 The objective of this project is to test simple cases using nextjs, prisma, clackauth, shadcn-ui and the rest of t3 stack.
