@@ -5,7 +5,7 @@ export default function Form() {
   return (
     <>
       <Head>
-        <title>Forn</title>
+        <title>Form</title>
         <meta name="description" content="Input form" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
