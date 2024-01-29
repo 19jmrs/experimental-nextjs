@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "./ui/form";
 import { Input } from "./ui/input";
+import { api } from "~/utils/api";
 
 const formSchema = z.object({
   movie: z.string().min(2, {
@@ -31,12 +32,14 @@ export function ProfileForm() {
       number: 0,
     },
   });
-
+  const submitForm = api.submit.formSubmit.useMutation({
+    onSuccess(data) {
+      if (!data.formId) return;
+    },
+  });
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    //todo get the values from the form and post with the data on the database
-    //do I need to create an API for this?
-    //console.log(values.number);
+    submitForm.mutate({ movie: values.movie, number: values.number });
   }
 
   return (
