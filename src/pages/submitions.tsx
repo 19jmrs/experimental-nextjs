@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { DataTable } from "~/components/DataTable";
-import { columns } from "~/components/ui/columns";
+import { columns } from "~/components/columns";
 import { api } from "~/utils/api";
 
 export default function Submitions() {
-  const submitions = api.getSubmitions.getSubmtions.useQuery();
+  const submitions = api.submitions.getSubmtions.useQuery();
 
   return (
     <>
